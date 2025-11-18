@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freiermuth Cia LTDA - Industrial Maintenance</title>
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="main-content" style="padding-top: 0; justify-content: flex-start;">
+
+        <header id="navbar-principal">
+            <div class="logo-header">
+                <img src="../dark_logo_white_background.jpg" alt="Freiermuth Logo" />
+            </div>
+            <nav class="links-nav">
+                <a href="#servicios-section">Services</a>
+                <a href="#nosotros-section">About Us</a>
+                <a href="#contacto-section">Contact</a>
+            </nav>
+        </header>
+
+        <main id="contenido-dinamico">
+            
+            <section id="hero-section">
+                <h1>Freiermuth Cia LTDA: Trusted Industrial Maintenance and Consulting.</h1>
+                <p>Increase your equipment's efficiency and lifespan with our certified experts.</p>
+                <a href="#contacto-section" class="cta-principal">Request a Consultation Today</a>
+            </section>
+
+            <section id="servicios-section">
+                <h2>Our Industrial Solutions</h2>
+                
+                <div class="servicio-card">
+                    <h3>Consulting and Technical Solutions</h3>
+                    <p>
+                        We offer Industrial Consulting and Technical Solutions, analysis of mechanical and process problems, in addition to the preparation of technical reports.
+                    </p>
+                </div>
+                
+                <div class="servicio-card">
+                    <h3>Assembly, Commissioning, and Warranty</h3>
+                    <p>
+                        Complete supervision of industrial plant assembly, including mechanical run-up, commissioning, and warranty tests to ensure performance.
+                    </p>
+                </div>
+                
+                <div class="servicio-card">
+                    <h3>Modernization and Special Processes</h3>
+                    <p>
+                        Supervision of retrofitting and modernizations, design of food processes, and waste-to-energy transformation projects.
+                    </p>
+                </div>
+            </section>
+            
+            <section id="nosotros-section">
+                <h2>Experience and Commitment</h2>
+                <p>Since our foundation, Freiermuth Cia LTDA has been dedicated to offering robust and reliable solutions in the industrial machinery sector. Our team of engineers and technicians is highly qualified and committed to excellence, ensuring your operation remains productive and safe. We focus on quality, safety, and respect for the environment.</p>
+
+                <div class="documentos-legales">
+                    <h3>Corporate Documentation</h3>
+                    <p>Consult our ethical principles and detailed information on the experience and history of our company.</p>
+                    
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                        <a href="../Code of Conduct_E.pdf" download class="cta-document">
+                            <span aria-hidden="true">&#x2193;</span> Code of Conduct (EN)
+                        </a>
+                        
+                        <a href="../Company presentation_EN.pdf" download class="cta-document">
+                            <span aria-hidden="true">&#x2193;</span> Company Presentation (EN)
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="contacto-section">
+                <h2>Talk to Our Experts</h2>
+                <p>We are ready to address your maintenance and consulting needs.</p>
+                
+                <form id="contact-form">
+                    <input type="text" placeholder="Full name" required>
+                    <input type="email" placeholder="Email address" required>
+                    <textarea placeholder="Message..." rows="5" required></textarea>
+                    <button type="submit" class="cta-principal">Send Message</button>
+                </form>
+                
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> +593 999 888 777</p>
+                    <p><strong>Email:</strong> contacto@freiermuth.com</p>
+                    <p><strong>Main Address:</strong> Industrial Street S/N, Quito, Ecuador</p>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer id="footer-principal">
+            <p>© 2025 Freiermuth Cia LTDA. All rights reserved. | 
+                <a href="#" onclick="olvidarIdiomaYVolver()">Change Language</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        /**
+         * Removes the saved language preference and returns to the selection page.
+         * NOTE: This function is called by the footer link.
+         */
+        function olvidarIdiomaYVolver() {
+            // 1. Remove the saved preference
+            localStorage.removeItem('idiomaPreferido');
+            
+            // 2. Redirect to the main page (language selector)
+            // Use '../index.html' because we are exiting the 'en/' folder
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

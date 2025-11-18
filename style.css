@@ -1,0 +1,253 @@
+/* Paleta de Colores: 
+   - Azul Principal (Oscuro Corporativo): #0D2C52
+   - Azul de Acento (Claro/Botones CTA): #1A478B
+   - Color Cálido (Hero y Selector de Idioma): #e9c46a 
+   - Blanco: #FFFFFF
+   - Gris Claro (Fondo General): #F4F4F4 
+*/
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+}
+
+/* Clases de Utilidad */
+.oculto {
+    display: none;
+}
+.oculto-contenido {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+
+/* --- SPLASH SCREEN --- */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0D2C52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+.logo-animado {
+    max-width: 400px; 
+    width: 80%;
+    height: auto;
+    opacity: 0; 
+    animation: fadein 1s ease-in 0.5s forwards; 
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* --- CONTENIDO PRINCIPAL (SELECTOR DE IDIOMA) --- */
+#main-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* BAJAR RECUADRO */
+    justify-content: flex-start; 
+    padding-top: 35vh; 
+}
+
+#selector-idioma {
+    text-align: center;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#selector-idioma p {
+    color: #0D2C52;
+    font-weight: 700;
+}
+
+.opciones-idioma button {
+    padding: 12px 25px;
+    margin: 10px;
+    
+    /* ESTILO CÁLIDO DEL SELECTOR */
+    border: 2px solid #e9c46a; 
+    background-color: #e9c46a; 
+    color: #0D2C52; 
+    
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 4px;
+}
+
+.opciones-idioma button:hover {
+    background-color: #0D2C52; 
+    color: #FFFFFF;
+    border-color: #0D2C52;
+}
+
+
+/* --- ESTILOS DE PÁGINA DE CONTENIDO --- */
+
+#navbar-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #0D2C52;
+    color: #FFFFFF;
+    width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-principal img {
+    height: 120px;
+}
+
+#navbar-principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+#navbar-principal a:hover {
+    color: #1A478B;
+}
+
+section {
+    padding: 80px 5%;
+    width: 90%;
+}
+
+#hero-section {
+    background-color: #e9c46a; 
+    min-height: 400px;
+    color: #FFFFFF; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cta-principal {
+    background-color: #1A478B;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-principal:hover {
+    background-color: #0D2C52;
+}
+
+#servicios-section {
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+.servicio-card {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contacto-section {
+    background-color: #FFFFFF;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-info {
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+#footer-principal {
+    background-color: #333;
+    color: #999;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+#footer-principal a {
+    color: #e9c46a; /* Color cálido para el enlace de cambio de idioma */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+#footer-principal a:hover {
+    color: #FFFFFF;
+}
+
+/* --- NUEVO ESTILO PARA BOTÓN DE DESCARGA DE DOCUMENTOS --- */
+.cta-document {
+    background-color: #0D2C52; /* Azul corporativo oscuro */
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: inline-flex; /* Para alinear el icono y el texto */
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-document:hover {
+    background-color: #1A478B; /* Azul corporativo claro (acento) */
+}
+
+/* Estilo para el ícono de descarga */
+.cta-document span {
+    font-size: 1.2em; 
+    margin-right: 10px;
+}
